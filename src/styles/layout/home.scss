@@ -1,0 +1,33 @@
+.dropzone {
+    width: 100%;
+    border: 0px;
+    height: auto;
+    padding: $gutter / 2;
+    cursor: pointer;
+    p {
+        color: $gray;
+    }
+
+   
+}
+
+.preview {
+    margin: $gutter / 2 0px;
+    padding: 0px $gutter + 40px;
+    max-height: 400px;
+    align-self: center;
+}
+
+.thinking {
+    padding: $gutter / 2 + 10 $gutter / 2 + 20px;
+    h3 {
+        font-size: 22px;
+        color: $blue;
+        margin-bottom: 25px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: .8;
+    }
+}

@@ -1,0 +1,263 @@
+body, html {
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  background: $light-blue;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.8;
+    color: $darker-blue;
+}
+
+h1, h2, h4, h5, h6 {
+  font-family: $circular-bold;
+}
+
+h1 {
+  font-size: 64px;
+  color: $blue;
+}
+
+h2 {
+  font-size: 48px;
+  font-family: $circular-book;
+  line-height: 1.6;
+}
+h3 {
+  font-size: 36px;
+  font-family: $circular-book;
+  line-height: 1.5;
+}
+
+p {
+    font-family: $circular-book;
+    font-size: 18px;
+    color: $black;
+    line-height: 1.8;
+}
+
+a {
+  transition: all 500ms ease-in-out;
+  color: $brand-green;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+a.underline {
+  color: $black;
+  border-bottom: 2px solid $black;
+  padding-bottom: 2px;
+  padding: 0px 4px 2px 4px;
+  &:hover {
+      transition: 0.2s ease-in-out;
+      box-shadow: inset 0 -40px 0 #F3E84C;
+      color: $black;
+      border-color: #F3E84C;
+  }
+}
+
+
+.subtitle {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.bold {
+  font-family: $circular-book!important;
+}
+
+// .container {
+//   padding-left: 45px;
+//   padding-right: 45px;
+// }
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.innerdiv {
+  background-color: white;
+  border-top: 10px solid $blue;
+  border-radius: 5px;
+  box-shadow: $boxshadow;
+  margin-bottom: 40px;
+  padding: $gutter / 2 + 20px;
+}
+
+.main-container {
+  overflow: hidden;
+}
+
+.main-content {
+  margin-top: $gutter / 2;
+  overflow-y: scroll;
+}
+
+.button-circular {
+  background-color: #2962ff;
+  color: white;
+  font-size: 44px;
+  text-align: center;
+  width: 75px;
+  height: 75px;
+  border-radius: 50px;
+  box-shadow: $boxshadow;
+  font-weight: 200;
+  margin: 0 auto;
+  margin-top: 30px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 500ms ease-in-out;
+  &:hover {
+    background-color: white;
+    color: $black;
+  }
+}
+// button {
+//     font-family: $circular-black;
+//     font-size: 18px;
+//     text-transform: uppercase;
+//     background-color: transparent;
+//     padding: 15px 45px;
+//     border: $bordersize solid $black;
+//     margin-top: $mobile-gutter;
+//     cursor: pointer;
+//     transition: all 500ms ease-in-out;
+//     letter-spacing: 1px;
+//     width: 210px;
+    
+    
+//     &:hover {
+//       background-color: $light-blue;
+//     }
+//     &.white {
+//         border: 2px solid white;
+//         color: white;
+//     }
+
+//     &.load-more {
+//       width: auto!important;
+//       margin: 0 auto;
+//     }
+// }
+
+
+
+// .border-top-none {
+//   border-top: none;
+// }
+
+// .background-span-blue {
+//   background-color: $light-blue;
+//   font-size: 34px;
+//   padding: 7px 10px;
+//   line-height: 1.9;
+//   color: $copy-green;
+//   text-align: center;
+//   -webkit-box-decoration-break: clone;
+//   box-decoration-break: clone;
+// }
+
+// footer {
+//     background-color: $black;
+//     height: auto;
+//     padding: $mobile-gutter;
+
+//     p {
+//         color: white;
+//         font-size: 18px;
+//         margin-top: 1rem;
+//     }
+
+//     a {
+//         color: white;
+//         border-bottom: 2px solid white;
+//     }
+// }
+
+
+
+/** REACT BURGER MENU **/
+
+/* Position and sizing of burger button */
+// .bm-burger-button {
+//     position: fixed;
+//     width: 41px;
+//     height: 35px;
+//     right: 31px;
+//     top: 31px;
+//     border: 5px solid transparent;
+//   }
+  
+//   /* Color/shape of burger icon bars */
+//   .bm-burger-bars {
+//     background: $black;
+//   }
+  
+//   /* Position and sizing of clickable cross button */
+//   .bm-cross-button {
+//     width: 25px!important;
+//     height: 35px!important;
+//     top: 30px!important;
+//     right: 40px!important;
+//   }
+  
+//   /* Color/shape of close button cross */
+//   .bm-cross {
+//     background: $tan;
+//     width: 3px;
+//     height: 30px!important;
+//   }
+  
+//   /* General sidebar styles */
+//   .bm-menu {
+//     background: $lighter-green;
+//     padding: $gutter/2 1.5em 0;
+//     font-size: 1.15em;
+//     overflow-y: hidden!important;
+
+//     .menu-item-wrapper {
+//       margin-bottom: 20px;
+//     }
+    
+//     .menu-item {
+//         font-family: $circular-black;
+//         font-size: 25px;
+//         text-transform: uppercase;
+//         color: $tan;
+//         display: block;
+//         text-align: center;
+//         letter-spacing: 1px;
+//         margin-bottom: 10px;    
+//     }
+
+//     .sub-menu-item {
+//       font-family: $circular-book;
+//       font-size: 20px;
+//       text-transform: none;
+//       color: $tan;
+//       display: block;
+//       text-align: center;
+//       letter-spacing: 1px;  
+//     }
+
+    
+//   }
+  
+//   /* Morph shape necessary with bubble or elastic */
+//   .bm-morph-shape {
+//     fill: #373a47;
+//   }
+  
+//   /* Wrapper for item list */
+//   .bm-item-list {
+//     color: #b8b7ad;
+//     padding: 0.8em;
+//     margin-top: 25px;
+//   }
+  
+//   /* Styling of overlay */
+//   .bm-overlay {
+//     background: rgba(14, 37, 38, .8)!important;
+//   }

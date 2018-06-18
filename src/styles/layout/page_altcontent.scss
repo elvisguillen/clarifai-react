@@ -1,0 +1,76 @@
+.rural-farmers {
+    background-color: $light-green;
+    padding: $mobile-gutter*2 0px;
+    
+    h1 {
+        margin-bottom: $mobile-gutter+20px;
+        line-height: 1 ;
+    }
+
+    h3 {
+        margin-bottom: $gutter/2;
+    }
+
+    .team-member {
+        h3 {
+            margin-bottom: 10px;
+        }
+        
+        .member-thumbnail {
+            a {
+                display: flex;
+                height: 289px;
+                img {
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    span {
+        @extend .background-span-blue;
+        background-color: $brand-green;
+        color: $tan;
+    }
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .rural-farmers-reasons {
+        background-color: white;
+        padding: $mobile-gutter 41px;
+        color: $brand-green;
+        
+        .reason {
+            margin-bottom: $mobile-gutter - 10px;
+            padding: 0px 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            
+            h2 {
+                font-size: 28px;
+                line-height: 45px;
+            }
+
+            &::after {
+                content: '+';
+                color: $lighter-green;
+                text-align: center;
+                font-size: 70px;
+                font-weight: 100;
+                font-family: Helvetica Neue,"Circular Book";
+                font-weight: 200;
+            }
+
+            &:last-of-type::after {
+                display: none;
+            }
+        }
+        p {
+            color: $brand-green;
+ 
+        }
+    }
+}

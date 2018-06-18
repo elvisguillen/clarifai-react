@@ -1,0 +1,38 @@
+@include media-breakpoint-up(xs) {
+
+ }
+@include media-breakpoint-up(sm) { 
+
+}
+@include media-breakpoint-up(md) { 
+
+  
+}
+@include media-breakpoint-up(lg) {
+    
+}
+
+@include media-breakpoint-up(xl) { 
+    .container {
+        max-width: 1400px;
+    }
+
+    
+}
+
+@media (min-width: 1600px) {
+    
+}
+
+@media (min-width: 800px) and (max-height: 720px) {
+    
+
+}
+
+// @media (min-width: 1200px) and (max-height: 772px) {
+//     .hero {
+//         span {
+//             font-size: 34px!important;
+//         }
+//     }
+// }
