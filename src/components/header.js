@@ -6,7 +6,8 @@ import logo from '../images/logo.svg'
 
 const Header = ({ siteTitle }) => (
   <Col
-    md='1'
+    md='2'
+    xl='1'
     id='sticky-sidebar'
     className='main-header'
     style={{

@@ -17,7 +17,8 @@ const Layout = ({ children, data }) => (
     />
     <Header siteTitle={data.site.siteMetadata.title} />
     <Col
-      md='11'
+      md='10'
+      xl='11'
       className='main-content'
       // style={{
       //   margin: '0 auto',

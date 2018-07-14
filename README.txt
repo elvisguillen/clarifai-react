@@ -1,27 +1,21 @@
-# Clarifai Frontend Coding Challenge - Elvis Guillen
+Clarifai Frontend Coding Challenge - Elvis Guillen
 
 This repo contains the source code and documentation powering my static Clarifai client-side application for the coding challenge portion of my interview.
 
-### Install Prerequisites
+Install Prerequisites:
 
 * Node (I recommend using v8.2.0 or higher)
-* [Gatsby CLI](https://www.gatsbyjs.org/docs/)
+* [Gatsby CLI](https://www.gatsbyjs.org/docs/) -  npm install --global gatsby-cli 
 
-```sh
-npm install --global gatsby-cli 
-```
+Run Locally:
 
-### Run Locally
-
-```sh
 cd clarifai-react
 npm install
 gatsby develop
-```
 
 Site will run locally on localhost:8000
 
-## Objective
+Objective:
 
 Create a client-side browser application that interacts with the Clarifai API and does the following:
 	•	Allows a user to send an image to the Predict service, using the "Face Detection" model
@@ -30,7 +24,7 @@ Create a client-side browser application that interacts with the Clarifai API 
 
 The app supports drag and drop functionality to upload images locally, then pre-processes them to base64 for the AI to infer and render bounding boxes and faces detected. 
 
-## Tools Used
+Tools Used:
 
 React - Best framework for state based layouts, also part of Clarifai’s workflow.
 Bootstrap - Easy prototyping with class based components for responsiveness.
@@ -40,19 +34,19 @@ GSAP & React Transition Group - Animation frameworks for interactions between in
 React Dropzone - Component library that implements a file upload, drag and drop interface.
 ESLint - Javascript Linter used to maintain code quality, I use Airbnb’s style guide with minor modifications. 
 
-## Edge Cases
+Edge Cases:
 
-There were a few cases I kept in mind while creating this:
+There were a few issues I kept in mind while creating this:
 
 - Percentage based bounding boxes for a fluid layout
 - Image sizes with a max-height between vertical and horizontal images
 - Correct handling when the AI returns 0 faces.
 - Grammatical conditions when it tells you how many faces it sees.
 
-
-## Roadmap and Future Features
+Roadmap and Future Features:
 
 - Currently only uses the Face Detection Model, would love to add a dropdown to choose between different models. 
 - Cutting out the bounding box region from the image using canvas and rendering them in the sidebar, similar to the example on the documentation site: 
   https://clarifai.com/models/face-detection-image-recognition-model-a403429f2ddf4b49b307e318f00e528b-detection#documentation
 - Being able to train a new model with the application.
+

@@ -1,22 +1,34 @@
-import React, {Component} from 'react'
-import TweenMax, { TimelineMax } from 'gsap';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import TweenMax from 'gsap';
 
 class ImagePreview extends Component {
-    componentWillEnter (callback) {
-        const el = this.container;
-        TweenMax.fromTo(el, 0.3, {y: 100, alpha: 0}, {y: 0, alpha: 1, onComplete: callback});
-    }
+  componentWillEnter(callback) {
+    const el = this.container;
+    TweenMax.fromTo(el, 0.6, { alpha: 0, display: 'block' },
+      {
+        alpha: 1, display: 'block', onComplete: callback,
+      });
+  }
 
-    componentWillLeave (callback) {
-        const el = this.container;
-        TweenMax.fromTo(el, 0.3, {y: 0, opacity: 1}, {y: -100, opacity: 0, onComplete: callback});
-    }
-    
-    render() {
-        return(
-            <img className='preview img-fluid' ref={c => this.container = c} src={this.props.preview}/>
-        )
-    }
+  componentWillLeave(callback) {
+    const el = this.container;
+    TweenMax.fromTo(el, 0.6, { display: 'block', alpha: 1 },
+      {
+        alpha: 0, display: 'block', onComplete: callback,
+      });
+  }
+
+  render() {
+    const { preview } = this.props;
+    return (
+      <img className='preview img-fluid' ref={(c) => { this.container = c; }} src={preview} alt='face-detection-preview' />
+    );
+  }
 }
 
-export default ImagePreview
+ImagePreview.propTypes = {
+  preview: PropTypes.string.isRequired,
+};
+
+export default ImagePreview;

@@ -1,15 +1,61 @@
 @include media-breakpoint-up(xs) {
-
+    // h1 {
+    //     font-size: 32px;
+    // }
+    // h2 {
+    //     font-size: 23px;
+    // }
+    // .drag-drop {
+    //     font-size: 23px;
+    // }
+    // .main-header {
+    // }
  }
 @include media-breakpoint-up(sm) { 
 
 }
 @include media-breakpoint-up(md) { 
+    body, html {
+        overflow: hidden;
+        padding-bottom: 0px;
+    }
 
+    h1 {
+        font-size: 36px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 19px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+    .main-header {
+        height: 100vh;
+        width: 100px;
+        .logo {
+            margin-top: $gutter / 2;
+        }
+    }
+
+    .dropzone {
+        border: 2px dashed $darker-blue;
+        height: auto;
+        position: relative;
+        box-shadow: none;
+    }
   
 }
 @include media-breakpoint-up(lg) {
-    
+    .image-wrapper {
+        .box {
+            border: 3px solid $blue;
+        }
+    }
 }
 
 @include media-breakpoint-up(xl) { 
@@ -17,6 +63,24 @@
         max-width: 1400px;
     }
 
+    h1 {
+        font-size: 64px;
+    }
+    
+    h2 {
+        font-size: 48px;
+    }
+    h3 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .main-header {
+        height: 100vh;
+    }
     
 }
 
@@ -29,10 +93,12 @@
 
 }
 
-// @media (min-width: 1200px) and (max-height: 772px) {
-//     .hero {
-//         span {
-//             font-size: 34px!important;
-//         }
-//     }
-// }
+@media (min-width: 1150px) and (max-height: 772px) {
+    .innerdiv {
+        padding: 40px;
+
+        .dropzone {
+            padding: 0px;
+        }
+    }
+}
