@@ -41,13 +41,13 @@ The app supports drag and drop functionality to upload images locally, then pre-
 
 ## Tools Used
 
-- React - Best framework for state based layouts, also part of Clarifai’s workflow.
-- Bootstrap - Easy prototyping with class based components for responsiveness.
-- GatsbyJS - Static site generator that is focused on React and provides a PWA based framework using Webpack and GraphQL. Simple to implement SASS and offline functionality.
-- SASS - Favorite CSS preprocessor, I take advantage of variables, nesting, and loopable styles for staggering css.
-- GSAP & React Transition Group - Animation frameworks for interactions between intentions.
-- React Dropzone - Component library that implements a file upload, drag and drop interface.
-- ESLint - Javascript Linter used to maintain code quality, I use Airbnb’s style guide with minor modifications. 
+- **React** - Best framework for state based layouts, also part of Clarifai’s workflow.
+- **Bootstrap** - Easy prototyping with class based components for responsiveness.
+- **GatsbyJS** - Static site generator that is focused on React and provides a PWA based framework using Webpack and GraphQL. Simple to implement SASS and offline functionality.
+- **SASS** - Favorite CSS preprocessor, I take advantage of variables, nesting, and loopable styles for staggering css.
+- **GSAP & React Transition Group** - Animation frameworks for interactions between intentions.
+- **React Dropzone** - Component library that implements a file upload, drag and drop interface.
+- **ESLint** - Javascript Linter used to maintain code quality, I use Airbnb’s style guide with minor modifications. 
 
 ## Edge Cases
 
