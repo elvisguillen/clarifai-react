@@ -51,6 +51,7 @@ There were a few issues I kept in mind while creating this:
 - Image sizes with a max-height between vertical and horizontal images
 - Correct handling when the AI returns 0 faces.
 - Grammatical conditions when it tells you how many faces it sees.
+- Tested and built on Google Chrome, responsive but not fully tested on mobile or other browsers.
 
 Roadmap and Future Features:
 

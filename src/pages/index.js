@@ -59,14 +59,6 @@ class IndexPage extends Component {
       }, 0.2, 1);
   }
 
-  onDragEnter() {
-    const dropIcon = document.getElementsByClassName('drag-drop-icon');
-    const dragEnter = new TweenMax();
-
-    dragEnter
-      .fromTo(dropIcon, 0.5, { y: '0px', repeat: -1 }, { y: '40px', repeat: -1 });
-  }
-
   // Main function that runs when an image is dropped into the Dropzone.
   // - This runs our preprocessing function.
   // - Then runs our face detection function inside it's callback with the correct base64 data.
