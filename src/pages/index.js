@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Col, Row, Container } from 'reactstrap';
 import Clarifai from 'clarifai';
 import Dropzone from 'react-dropzone';
-import { TimelineMax, TweenMax } from 'gsap';
+import { TimelineMax } from 'gsap';
 import TransitionGroupPlus from 'react-transition-group-plus';
 
 import ImagePreview from '../components/imagePreview';
@@ -25,8 +25,6 @@ class IndexPage extends Component {
     this.state = {
       data: [],
       files: [],
-      imageWidth: '',
-      imageHeight: '',
       loading: '',
       loaded: '',
     };
@@ -84,16 +82,9 @@ class IndexPage extends Component {
   // - Also, retrieves our image height and width and stores them in state.
   getDataUri(url, callback) {
     const image = new Image();
-    const component = this;
+
     image.onload = function onload() {
       const canvas = document.createElement('canvas');
-
-      canvas.width = this.naturalWidth;
-      canvas.height = this.naturalHeight;
-      component.setState({
-        imageWidth: canvas.width,
-        imageHeight: canvas.height,
-      });
 
       canvas.getContext('2d').drawImage(this, 0, 0);
       callback(canvas.toDataURL('image/png').replace(/^data:image\/(png|jpg);base64,/, ''));
@@ -103,19 +94,19 @@ class IndexPage extends Component {
   }
 
   // Bounding Box function.
-  // - Loops through our data and calculates the correct face bounding box pixels by multiplying
-  //   the float values between 0 - 1 with our height or width. Then converts it to percentage
-  //   by dividing with the height or width and multiplying by 100 for responsive use case.
-  // - Stores the pixel values in a new array which then gets sent to our state.
+  // - Loops through our data and calculates the correct face bounding box by multiplying
+  //   the float values between 0 - 1 by 100 to get the percentage. I initially multipled
+  //   with our height or width for pixels but needed percentage for a fluid layout.
+  // - Stores the percentage values in a new array which then gets sent to our state.
   getBoundingBoxes() {
-    const { data, imageWidth, imageHeight } = this.state;
+    const { data } = this.state;
     const facesToPercentage = [];
 
     for (let i = 0; i < data.length; i += 1) {
-      const top = ((data[i].top_row * imageHeight) / imageHeight) * 100;
-      const left = ((data[i].left_col * imageWidth) / imageWidth) * 100;
-      const bottom = ((data[i].bottom_row * imageHeight) / imageHeight) * 100;
-      const right = ((data[i].right_col * imageWidth) / imageWidth) * 100;
+      const top = data[i].top_row * 100;
+      const left = data[i].left_col * 100;
+      const bottom = data[i].bottom_row * 100;
+      const right = data[i].right_col * 100;
 
       const box = {
         top, left, bottom, right,
