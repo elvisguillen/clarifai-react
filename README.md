@@ -41,13 +41,13 @@ The app supports drag and drop functionality to upload images locally, then pre-
 
 ## Tools Used
 
-React - Best framework for state based layouts, also part of Clarifai’s workflow.
-Bootstrap - Easy prototyping with class based components for responsiveness.
-GatsbyJS - Static site generator that is focused on React and provides a PWA based framework using Webpack and GraphQL. Simple to implement SASS and offline functionality.
-SASS - Favorite CSS preprocessor, I take advantage of variables, nesting, and loopable styles for staggering css.
-GSAP & React Transition Group - Animation frameworks for interactions between intentions.
-React Dropzone - Component library that implements a file upload, drag and drop interface.
-ESLint - Javascript Linter used to maintain code quality, I use Airbnb’s style guide with minor modifications. 
+- React - Best framework for state based layouts, also part of Clarifai’s workflow.
+- Bootstrap - Easy prototyping with class based components for responsiveness.
+- GatsbyJS - Static site generator that is focused on React and provides a PWA based framework using Webpack and GraphQL. Simple to implement SASS and offline functionality.
+- SASS - Favorite CSS preprocessor, I take advantage of variables, nesting, and loopable styles for staggering css.
+- GSAP & React Transition Group - Animation frameworks for interactions between intentions.
+- React Dropzone - Component library that implements a file upload, drag and drop interface.
+- ESLint - Javascript Linter used to maintain code quality, I use Airbnb’s style guide with minor modifications. 
 
 ## Edge Cases
 
@@ -62,7 +62,7 @@ There were a few cases I kept in mind while creating this:
 
 ## Roadmap and Future Features
 
-- Currently only uses the Face Detection Model, would love to add a dropdown to choose between different models. 
-- Cutting out the bounding box region from the image using canvas and rendering them in the sidebar, similar to the example on the documentation site: 
+1. Currently only uses the Face Detection Model, would love to add a dropdown to choose between different models. 
+2. Cutting out the bounding box region from the image using canvas and rendering them in the sidebar, similar to the example on the documentation site: 
   https://clarifai.com/models/face-detection-image-recognition-model-a403429f2ddf4b49b307e318f00e528b-detection#documentation
-- Being able to train a new model with the application.
+3. Being able to train a new model with the application.
