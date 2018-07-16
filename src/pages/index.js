@@ -111,7 +111,7 @@ class IndexPage extends Component {
   }
 
   // Bounding Box function.
-  // - Loops through our data and calculates the correct bounding box pixels by multiplying
+  // - Loops through our data and calculates the correct face bounding box pixels by multiplying
   //   the float values between 0 - 1 with our height or width. Then converts it to percentage
   //   by dividing with the height or width and multiplying by 100 for responsive use case.
   // - Stores the pixel values in a new array which then gets sent to our state.
@@ -196,7 +196,7 @@ class IndexPage extends Component {
             <Col sm='12' md='8'>
               <div className='innerdiv fadeInUp'>
 
-                {/* Ternary condition for displaying initial front end before an image is loaded */}
+                {/* Ternary condition for displaying initial copy before an image is loaded */}
 
                 {loaded === 'loaded'
                   ? ''
@@ -216,7 +216,7 @@ class IndexPage extends Component {
 
                 {/* This is our main view for displaying the uploading image and any bounding boxes
                     if it detects faces.
-                    - Wrapped in Transition Group component to animate the image.
+                    - Wrapped in Transition Group component to animate the image and bounding boxes.
                     - Renders the uploaded image with the ImagePreview component
                     - Maps through our face data stored in state and renders the bounding box using
                       our BoundingBox component.
@@ -242,9 +242,9 @@ class IndexPage extends Component {
 
                   </TransitionGroupPlus>
                 </div>
+
                 {/* This is our main file drop area component using
                     the react-dropzone component. */}
-
                 <Dropzone className='dropzone d-flex justify-content-center align-items-center' onDrop={this.onDrop}>
                   {loaded === 'loaded'
                     ? (
@@ -272,7 +272,6 @@ class IndexPage extends Component {
                         <p className='d-none d-lg-block drag-drop'>
                           an image  or click to browse
                         </p>
-                        
                       </Col>
                     )
                   }
@@ -293,9 +292,10 @@ class IndexPage extends Component {
                   What I See | Probability
                 </h3>
 
-                {loading === 'loading' ?
-                  <img className='align-self-center' src={loadingImage} alt='loading' />
-                  : (
+                {loading === 'loading'
+                  ? (
+                    <img className='align-self-center' src={loadingImage} alt='loading' />
+                  ) : (
                     <p>
                       {`I detected ${data.length} ${data.length < 2 && data.length !== 0 ? 'face' : 'faces'}.`}
                     </p>

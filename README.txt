@@ -15,6 +15,15 @@ gatsby develop
 
 Site will run locally on localhost:8000
 
+Site Structure:
+
+/src/pages/index.js - Main page component file that has all the image processing and face detection logic, it also renders the main front end.
+/src/components - Smaller components used to render parts of the front end including, image and bounding box elements.
+/src/layout/index.js - Layout component that renders the page component, includes sidebar and body layout elements.
+
+/styles/global/* - SASS files that are global including initial variables, animations, initial text and layout styling.
+/styles/home.scss - Main styling for the main page elements.
+
 Objective:
 
 Create a client-side browser application that interacts with the Clarifai API and does the following:

@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import {Col, Row} from 'reactstrap'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { Col, Row } from 'reactstrap';
 
-import Header from '../components/header'
-import '../styles/index.scss'
+import Header from '../components/header';
+import '../styles/index.scss';
 
 const Layout = ({ children, data }) => (
   <Row>
@@ -30,13 +30,13 @@ const Layout = ({ children, data }) => (
       {children()}
     </Col>
   </Row>
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.func,
-}
+};
 
-export default Layout
+export default Layout;
 
 export const query = graphql`
   query SiteTitleQuery {
@@ -46,4 +46,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

@@ -11,7 +11,8 @@ module.exports = {
         "react/require-default-props": "off",
         "react/no-array-index-key": "off",
         "react/prop-types": "off",
-        "class-methods-use-this": "off"
+        "class-methods-use-this": "off",
+        "no-undef": "off",
     },
     "env": {
         "browser": true,
