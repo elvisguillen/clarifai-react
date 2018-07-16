@@ -23,19 +23,19 @@ Site will run locally on localhost:8000
 
 ## Site Structure
 
-/src/pages/index.js - Main page component file that has all the image processing and face detection logic, it also renders the main front end.
-/src/components - Smaller components used to render parts of the front end including, image and bounding box elements.
-/src/layout/index.js - Layout component that renders the page component, includes sidebar and body layout elements.
+- **/src/pages/index.js** - Main page component file that has all the image processing and face detection logic, it also renders the main front end.
+- **/src/components** - Smaller components used to render parts of the front end including, image and bounding box elements.
+- **/src/layout/index.js** - Layout component that renders the page component, includes sidebar and body layout elements.
 
-/styles/global/* - SASS files that are global including initial variables, animations, initial text and layout styling.
-/styles/home.scss - Main styling for the main page elements.
+- **/styles/global** - SASS files that are global including initial variables, animations, initial text and layout styling.
+- **/styles/home.scss** - Main styling for the main page elements.
 
 ## Objective
 
 Create a client-side browser application that interacts with the Clarifai API and does the following:
-	•	Allows a user to send an image to the Predict service, using the "Face Detection" model
-	•	Displays the number of faces detected
-	•	Uses the returned bounding boxes (if any) to draw a box around each face in the uploaded image
+- Allows a user to send an image to the Predict service, using the "Face Detection" model
+- Displays the number of faces detected
+- Uses the returned bounding boxes (if any) to draw a box around each face in the uploaded image
 
 The app supports drag and drop functionality to upload images locally, then pre-processes them to base64 for the AI to infer and render bounding boxes and faces detected. 
 
@@ -57,6 +57,7 @@ There were a few cases I kept in mind while creating this:
 - Image sizes with a max-height between vertical and horizontal images
 - Correct handling when the AI returns 0 faces.
 - Grammatical conditions when it tells you how many faces it sees.
+- Tested and built on Google Chrome, responsive but not fully tested on mobile or other browsers.
 
 
 ## Roadmap and Future Features

@@ -1,16 +1,6 @@
 @include media-breakpoint-up(xs) {
-    // h1 {
-    //     font-size: 32px;
-    // }
-    // h2 {
-    //     font-size: 23px;
-    // }
-    // .drag-drop {
-    //     font-size: 23px;
-    // }
-    // .main-header {
-    // }
- }
+
+}
 @include media-breakpoint-up(sm) { 
 
 }
@@ -42,12 +32,6 @@
         }
     }
 
-    .dropzone {
-        border: 2px dashed $darker-blue;
-        height: auto;
-        position: relative;
-        box-shadow: none;
-    }
   
 }
 @include media-breakpoint-up(lg) {

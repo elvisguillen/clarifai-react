@@ -259,7 +259,7 @@ class IndexPage extends Component {
                       </div>
                     ) : (
                       <Col className='d-flex flex-column text-center justify-content-center'>
-                        <img className='d-none d-lg-flex drag-drop-icon' src={iconDrop} alt='drop-icon' />
+                        <img className='d-none d-lg-block drag-drop-icon' src={iconDrop} alt='drop-icon' />
                         <div className='d-block d-lg-none button-circular'>
                           +
                         </div>
