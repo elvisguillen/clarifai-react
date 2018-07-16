@@ -82,9 +82,11 @@ class IndexPage extends Component {
   // - Also, retrieves our image height and width and stores them in state.
   getDataUri(url, callback) {
     const image = new Image();
-
     image.onload = function onload() {
       const canvas = document.createElement('canvas');
+
+      canvas.width = this.naturalWidth;
+      canvas.height = this.naturalHeight;
 
       canvas.getContext('2d').drawImage(this, 0, 0);
       callback(canvas.toDataURL('image/png').replace(/^data:image\/(png|jpg);base64,/, ''));
